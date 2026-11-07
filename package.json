@@ -1,0 +1,38 @@
+{
+  "name": "auto-ontology-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "記事から自動で組み立てるオントロジー体験デモ",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "dev": "node scripts/dev.mjs",
+    "build": "vite build",
+    "build:ontology": "tsx scripts/build-ontology.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "vite build && playwright test",
+    "check:secrets": "node scripts/check-secrets.mjs"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.10",
+    "fastify": "^5.12.8",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
+}

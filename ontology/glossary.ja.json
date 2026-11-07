@@ -1,0 +1,696 @@
+{
+ "version": 1,
+ "concepts": [
+  {
+   "id": "anthropic",
+   "label": "Anthropic",
+   "type": "org",
+   "synonyms": [],
+   "description": "Claude を開発する AI 企業",
+   "relations": []
+  },
+  {
+   "id": "openai",
+   "label": "OpenAI",
+   "type": "org",
+   "synonyms": [],
+   "description": "GPT や Codex を提供する AI 企業",
+   "relations": []
+  },
+  {
+   "id": "google",
+   "label": "Google",
+   "type": "org",
+   "synonyms": [],
+   "description": "Gemini などを提供する企業",
+   "relations": []
+  },
+  {
+   "id": "nvidia",
+   "label": "NVIDIA",
+   "type": "org",
+   "synonyms": [
+    "エヌビディア"
+   ],
+   "description": "GPU と AI ソフトウェアを提供する企業",
+   "relations": []
+  },
+  {
+   "id": "microsoft",
+   "label": "Microsoft",
+   "type": "org",
+   "synonyms": [
+    "マイクロソフト"
+   ],
+   "description": "GitHub Copilot などを提供する企業",
+   "relations": []
+  },
+  {
+   "id": "github",
+   "label": "GitHub",
+   "type": "org",
+   "synonyms": [],
+   "description": "コードの共有・共同開発のサービス",
+   "relations": []
+  },
+  {
+   "id": "claude",
+   "label": "Claude",
+   "type": "product",
+   "synonyms": [],
+   "description": "Anthropic の大規模言語モデル",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "llm"
+    },
+    {
+     "type": "made_by",
+     "target": "anthropic"
+    }
+   ]
+  },
+  {
+   "id": "claude-code",
+   "label": "Claude Code",
+   "type": "product",
+   "synonyms": [
+    "ClaudeCode"
+   ],
+   "description": "Anthropic のコーディングエージェント",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "coding-agent"
+    },
+    {
+     "type": "made_by",
+     "target": "anthropic"
+    }
+   ]
+  },
+  {
+   "id": "codex",
+   "label": "Codex",
+   "type": "product",
+   "synonyms": [
+    "Codex CLI"
+   ],
+   "description": "OpenAI のコーディングエージェント",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "coding-agent"
+    },
+    {
+     "type": "made_by",
+     "target": "openai"
+    }
+   ]
+  },
+  {
+   "id": "github-copilot",
+   "label": "GitHub Copilot",
+   "type": "product",
+   "synonyms": [
+    "Copilot"
+   ],
+   "description": "コード補完とエージェント機能を持つ開発支援",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "coding-agent"
+    },
+    {
+     "type": "made_by",
+     "target": "microsoft"
+    }
+   ]
+  },
+  {
+   "id": "cursor",
+   "label": "Cursor",
+   "type": "product",
+   "synonyms": [],
+   "description": "AI 搭載のコードエディタ",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "coding-agent"
+    }
+   ]
+  },
+  {
+   "id": "gpt",
+   "label": "GPT",
+   "type": "product",
+   "synonyms": [
+    "ChatGPT"
+   ],
+   "description": "OpenAI の大規模言語モデル",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "llm"
+    },
+    {
+     "type": "made_by",
+     "target": "openai"
+    }
+   ]
+  },
+  {
+   "id": "gemini",
+   "label": "Gemini",
+   "type": "product",
+   "synonyms": [],
+   "description": "Google の大規模言語モデル",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "llm"
+    },
+    {
+     "type": "made_by",
+     "target": "google"
+    }
+   ]
+  },
+  {
+   "id": "auto-ontology",
+   "label": "auto-ontology",
+   "type": "product",
+   "synonyms": [
+    "NVIDIA/auto-ontology"
+   ],
+   "description": "データから用語と関係の下書きを自動生成するオープンソース",
+   "relations": [
+    {
+     "type": "made_by",
+     "target": "nvidia"
+    },
+    {
+     "type": "is_a",
+     "target": "ontology"
+    }
+   ]
+  },
+  {
+   "id": "langchain",
+   "label": "LangChain",
+   "type": "product",
+   "synonyms": [],
+   "description": "LLM アプリを組み立てるライブラリ",
+   "relations": []
+  },
+  {
+   "id": "postgres",
+   "label": "Postgres",
+   "type": "product",
+   "synonyms": [
+    "PostgreSQL"
+   ],
+   "description": "オープンソースのリレーショナルデータベース",
+   "relations": []
+  },
+  {
+   "id": "pgvector",
+   "label": "pgvector",
+   "type": "product",
+   "synonyms": [],
+   "description": "Postgres でベクトル検索を行う拡張",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "vector-database"
+    }
+   ]
+  },
+  {
+   "id": "playwright",
+   "label": "Playwright",
+   "type": "product",
+   "synonyms": [],
+   "description": "ブラウザを自動操作するテストツール",
+   "relations": []
+  },
+  {
+   "id": "typescript",
+   "label": "TypeScript",
+   "type": "product",
+   "synonyms": [],
+   "description": "型を持つ JavaScript",
+   "relations": []
+  },
+  {
+   "id": "python",
+   "label": "Python",
+   "type": "product",
+   "synonyms": [],
+   "description": "汎用のプログラミング言語",
+   "relations": []
+  },
+  {
+   "id": "docker",
+   "label": "Docker",
+   "type": "product",
+   "synonyms": [],
+   "description": "コンテナで実行環境をそろえる道具",
+   "relations": []
+  },
+  {
+   "id": "agents-md",
+   "label": "AGENTS.md",
+   "type": "product",
+   "synonyms": [],
+   "description": "エージェントに作業ルールを渡すファイル",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "context-engineering"
+    }
+   ]
+  },
+  {
+   "id": "mcp",
+   "label": "MCP",
+   "type": "technique",
+   "synonyms": [
+    "Model Context Protocol"
+   ],
+   "description": "エージェントが外部の道具やデータにつながるための共通規格",
+   "relations": [
+    {
+     "type": "made_by",
+     "target": "anthropic"
+    }
+   ]
+  },
+  {
+   "id": "rag",
+   "label": "RAG",
+   "type": "technique",
+   "synonyms": [
+    "検索拡張生成",
+    "Retrieval-Augmented Generation"
+   ],
+   "description": "検索した文書を渡して LLM に答えさせる手法",
+   "relations": []
+  },
+  {
+   "id": "knowledge-graph",
+   "label": "ナレッジグラフ",
+   "type": "technique",
+   "synonyms": [
+    "知識グラフ",
+    "Knowledge Graph"
+   ],
+   "description": "概念と関係をグラフで表したデータ",
+   "relations": []
+  },
+  {
+   "id": "embedding",
+   "label": "埋め込み",
+   "type": "technique",
+   "synonyms": [
+    "エンベディング",
+    "embedding"
+   ],
+   "description": "文章を数値ベクトルにする表現",
+   "relations": []
+  },
+  {
+   "id": "vector-database",
+   "label": "ベクトルデータベース",
+   "type": "technique",
+   "synonyms": [
+    "ベクトルDB",
+    "vector database"
+   ],
+   "description": "ベクトルの近さで検索するデータベース",
+   "relations": []
+  },
+  {
+   "id": "text-to-sql",
+   "label": "Text-to-SQL",
+   "type": "technique",
+   "synonyms": [
+    "text2sql"
+   ],
+   "description": "自然文から SQL を作る手法",
+   "relations": []
+  },
+  {
+   "id": "sql",
+   "label": "SQL",
+   "type": "technique",
+   "synonyms": [],
+   "description": "データベースへの問い合わせ言語",
+   "relations": []
+  },
+  {
+   "id": "fine-tuning",
+   "label": "ファインチューニング",
+   "type": "technique",
+   "synonyms": [
+    "fine-tuning",
+    "微調整"
+   ],
+   "description": "追加データでモデルを調整すること",
+   "relations": []
+  },
+  {
+   "id": "prompt-engineering",
+   "label": "プロンプトエンジニアリング",
+   "type": "technique",
+   "synonyms": [
+    "prompt engineering"
+   ],
+   "description": "指示文を工夫して出力を良くすること",
+   "relations": []
+  },
+  {
+   "id": "context-engineering",
+   "label": "コンテキストエンジニアリング",
+   "type": "technique",
+   "synonyms": [
+    "context engineering"
+   ],
+   "description": "モデルに渡す文脈を設計すること",
+   "relations": []
+  },
+  {
+   "id": "chain-of-thought",
+   "label": "思考の連鎖",
+   "type": "technique",
+   "synonyms": [
+    "chain-of-thought",
+    "CoT"
+   ],
+   "description": "途中の推論を書かせて精度を上げる手法",
+   "relations": []
+  },
+  {
+   "id": "function-calling",
+   "label": "関数呼び出し",
+   "type": "technique",
+   "synonyms": [
+    "function calling",
+    "tool calling"
+   ],
+   "description": "モデルが外部の関数を呼ぶ仕組み",
+   "relations": []
+  },
+  {
+   "id": "multi-agent",
+   "label": "マルチエージェント",
+   "type": "technique",
+   "synonyms": [
+    "multi-agent"
+   ],
+   "description": "複数のエージェントが分担して働く構成",
+   "relations": []
+  },
+  {
+   "id": "subagent",
+   "label": "サブエージェント",
+   "type": "technique",
+   "synonyms": [
+    "subagent"
+   ],
+   "description": "親のエージェントから呼ばれる子のエージェント",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "agent"
+    }
+   ]
+  },
+  {
+   "id": "guardrails",
+   "label": "ガードレール",
+   "type": "technique",
+   "synonyms": [
+    "guardrails"
+   ],
+   "description": "出力や操作を安全な範囲に収める仕組み",
+   "relations": []
+  },
+  {
+   "id": "sandbox",
+   "label": "サンドボックス",
+   "type": "technique",
+   "synonyms": [
+    "sandbox"
+   ],
+   "description": "隔離された安全な実行環境",
+   "relations": []
+  },
+  {
+   "id": "a2a",
+   "label": "A2A",
+   "type": "technique",
+   "synonyms": [
+    "Agent2Agent"
+   ],
+   "description": "エージェント同士が会話するための規格",
+   "relations": [
+    {
+     "type": "made_by",
+     "target": "google"
+    }
+   ]
+  },
+  {
+   "id": "ontology",
+   "label": "オントロジー",
+   "type": "idea",
+   "synonyms": [
+    "ontology"
+   ],
+   "description": "概念とその関係を明示的に定義したもの",
+   "relations": []
+  },
+  {
+   "id": "semantic-layer",
+   "label": "セマンティックレイヤー",
+   "type": "idea",
+   "synonyms": [
+    "semantic layer"
+   ],
+   "description": "データに業務の意味を与える層",
+   "relations": []
+  },
+  {
+   "id": "data-catalog",
+   "label": "データカタログ",
+   "type": "idea",
+   "synonyms": [
+    "data catalog"
+   ],
+   "description": "社内データの一覧と説明",
+   "relations": []
+  },
+  {
+   "id": "provenance",
+   "label": "出どころ",
+   "type": "idea",
+   "synonyms": [
+    "provenance",
+    "来歴"
+   ],
+   "description": "答えの根拠がどこから来たか",
+   "relations": []
+  },
+  {
+   "id": "agent",
+   "label": "エージェント",
+   "type": "idea",
+   "synonyms": [
+    "AI エージェント",
+    "agent",
+    "agents"
+   ],
+   "description": "目的に向けて道具を使いながら自律的に動く AI",
+   "relations": []
+  },
+  {
+   "id": "coding-agent",
+   "label": "コーディングエージェント",
+   "type": "idea",
+   "synonyms": [
+    "coding agent"
+   ],
+   "description": "コードを読み書きして開発を進めるエージェント",
+   "relations": [
+    {
+     "type": "is_a",
+     "target": "agent"
+    }
+   ]
+  },
+  {
+   "id": "skill",
+   "label": "スキル",
+   "type": "idea",
+   "synonyms": [
+    "skill",
+    "skills",
+    "Agent Skills"
+   ],
+   "description": "エージェントが読む再利用可能な手順書",
+   "relations": []
+  },
+  {
+   "id": "plugin",
+   "label": "プラグイン",
+   "type": "idea",
+   "synonyms": [
+    "plugin"
+   ],
+   "description": "機能を足す拡張",
+   "relations": []
+  },
+  {
+   "id": "harness",
+   "label": "ハーネス",
+   "type": "idea",
+   "synonyms": [
+    "harness"
+   ],
+   "description": "エージェントを動かす周りの仕組み",
+   "relations": []
+  },
+  {
+   "id": "memory",
+   "label": "メモリ",
+   "type": "idea",
+   "synonyms": [
+    "記憶"
+   ],
+   "description": "エージェントが覚えておく情報",
+   "relations": []
+  },
+  {
+   "id": "workflow",
+   "label": "ワークフロー",
+   "type": "idea",
+   "synonyms": [
+    "workflow"
+   ],
+   "description": "決まった順序の処理の流れ",
+   "relations": []
+  },
+  {
+   "id": "tool-use",
+   "label": "ツール利用",
+   "type": "idea",
+   "synonyms": [
+    "tool use"
+   ],
+   "description": "エージェントが道具を使うこと",
+   "relations": []
+  },
+  {
+   "id": "llm",
+   "label": "LLM",
+   "type": "idea",
+   "synonyms": [
+    "大規模言語モデル"
+   ],
+   "description": "大量の文章で学習した言語モデル",
+   "relations": []
+  },
+  {
+   "id": "reasoning",
+   "label": "推論モデル",
+   "type": "idea",
+   "synonyms": [
+    "reasoning model"
+   ],
+   "description": "考えてから答えるモデル",
+   "relations": []
+  },
+  {
+   "id": "evaluation",
+   "label": "評価",
+   "type": "idea",
+   "synonyms": [
+    "evals",
+    "eval"
+   ],
+   "description": "出力の品質を測ること",
+   "relations": []
+  },
+  {
+   "id": "benchmark",
+   "label": "ベンチマーク",
+   "type": "idea",
+   "synonyms": [
+    "benchmark"
+   ],
+   "description": "性能を比べるための共通課題",
+   "relations": []
+  },
+  {
+   "id": "hallucination",
+   "label": "ハルシネーション",
+   "type": "idea",
+   "synonyms": [
+    "hallucination"
+   ],
+   "description": "もっともらしい誤りを出力すること",
+   "relations": []
+  },
+  {
+   "id": "observability",
+   "label": "可観測性",
+   "type": "idea",
+   "synonyms": [
+    "observability"
+   ],
+   "description": "動作を観察して原因をたどれること",
+   "relations": []
+  },
+  {
+   "id": "open-source",
+   "label": "オープンソース",
+   "type": "idea",
+   "synonyms": [
+    "open source",
+    "OSS"
+   ],
+   "description": "ソースコードが公開されたソフトウェア",
+   "relations": []
+  },
+  {
+   "id": "e2e",
+   "label": "e2e",
+   "type": "technique",
+   "synonyms": [
+    "E2E",
+    "エンドツーエンド"
+   ],
+   "description": "利用者の操作を通した画面の自動テスト",
+   "relations": []
+  },
+  {
+   "id": "cli",
+   "label": "CLI",
+   "type": "idea",
+   "synonyms": [
+    "コマンドライン"
+   ],
+   "description": "文字で操作する道具",
+   "relations": []
+  },
+  {
+   "id": "web-ui",
+   "label": "Web UI",
+   "type": "idea",
+   "synonyms": [],
+   "description": "ブラウザで使う画面",
+   "relations": []
+  }
+ ]
+}

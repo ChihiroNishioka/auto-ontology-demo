@@ -1,0 +1,165 @@
+{
+  "results": [
+    {
+      "Title": "Claude Code に MCP を組み込む入門",
+      "userDefined:URL": "https://example.com/articles/claude-code-mcp",
+      "Summary": "Claude Code に MCP サーバーを組み込み、社内の資料を参照させる手順を解説する。MCP を使うとエージェントが外部の道具を呼び出せる。",
+      "Key Takeaways": "・Claude Code は MCP で外部ツールを呼ぶ<br />・Anthropic が MCP の仕様を公開している",
+      "Knowledge Delta": "Extend: MCP の設定をスキルにまとめる",
+      "Content Type": "Web Article",
+      "Source": "[架空ブログ](https://example.com/blog)",
+      "date:Captured At:start": "2026-01-05",
+      "AI Score": 88,
+      "Processing Status": "Processed",
+      "Related Articles": [
+        "https://example.com/page/mcp-ontology"
+      ],
+      "url": "https://example.com/page/claude-code-mcp",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "MCP でオントロジーをエージェントに渡す",
+      "userDefined:URL": "https://example.com/articles/mcp-ontology",
+      "Summary": "MCP を通じてオントロジーをエージェントに渡す設計を紹介する。オントロジーがあると、エージェントは用語の意味を取り違えにくい。",
+      "Key Takeaways": "・オントロジーと MCP を組み合わせる<br />・用語の定義を共有する",
+      "Knowledge Delta": "Extend: オントロジーの更新を MCP 経由で配る",
+      "Content Type": "Web Article",
+      "Source": "架空ブログ",
+      "date:Captured At:start": "2026-01-12",
+      "AI Score": 92,
+      "Processing Status": "Processed",
+      "Related Articles": [
+        "https://example.com/page/claude-code-mcp",
+        "https://example.com/page/ontology-vs-rag"
+      ],
+      "url": "https://example.com/page/mcp-ontology",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "オントロジーと RAG を比較する",
+      "userDefined:URL": "https://example.com/articles/ontology-vs-rag",
+      "Summary": "オントロジーと RAG を比較し、根拠の示しやすさで違いを整理する。RAG は検索が速いが関係を説明しにくい。",
+      "Key Takeaways": "・RAG vs ナレッジグラフ の使い分け<br />・オントロジーはナレッジグラフ の土台になる",
+      "Knowledge Delta": "Contrast: RAG だけでは関係の根拠が出ない",
+      "Content Type": "Web Article",
+      "Source": "架空ニュース",
+      "date:Captured At:start": "2026-01-20",
+      "AI Score": 81,
+      "Processing Status": "Processed",
+      "Related Articles": [],
+      "url": "https://example.com/page/ontology-vs-rag",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "NVIDIA の auto-ontology を読む",
+      "userDefined:URL": "https://example.com/articles/nvidia-auto-ontology",
+      "Summary": "NVIDIA の auto-ontology は、データから用語と関係の下書きを自動生成し、人が確認する流れを取る。Postgres と pgvector を使う。",
+      "Key Takeaways": "・下書きを自動生成し、人が確認する<br />・オントロジーを根拠つきで答えに使う",
+      "Knowledge Delta": "Extend: 確認済みの用語だけを信頼する",
+      "Content Type": "GitHub Repo",
+      "Source": "example.com/nvidia",
+      "date:Captured At:start": "2026-02-02",
+      "AI Score": 95,
+      "Processing Status": "Processed",
+      "Related Articles": [],
+      "url": "https://example.com/page/nvidia-auto-ontology",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "Codex と Claude Code を比較する",
+      "userDefined:URL": "https://example.com/articles/codex-vs-claude-code",
+      "Canonical URL": "https://example.com/articles/codex-vs-claude-code?utm_source=demo",
+      "Summary": "Codex と Claude Code を比較し、コーディングエージェントの使い勝手を整理する。OpenAI の Codex は CLI から動かせる。",
+      "Key Takeaways": "・Codex vs Claude Code は作業の分け方が違う<br />・Anthropic と OpenAI が競っている",
+      "Knowledge Delta": "Contrast: どちらも AGENTS.md を読める",
+      "Content Type": "X Post",
+      "Source": "架空 X",
+      "date:Captured At:start": "2026-02-10",
+      "AI Score": 70,
+      "Processing Status": "Processed",
+      "Related Articles": [],
+      "url": "https://example.com/page/codex-vs-claude-code",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "AGENTS.md でエージェントに作業ルールを渡す",
+      "userDefined:URL": "https://example.com/articles/agents-md-rules",
+      "Summary": "AGENTS.md に作業ルールを書くと、Codex や Claude Code が同じ約束を読む。スキルと組み合わせると手順も共有できる。",
+      "Key Takeaways": "・AGENTS.md はリポジトリに置く<br />・スキルで手順を再利用する",
+      "Knowledge Delta": "Extend: ルールの置き場所を一本化する",
+      "Content Type": "GitHub Repo",
+      "Source": "example.com/rules",
+      "date:Captured At:start": "2026-02-18",
+      "AI Score": 77,
+      "Processing Status": "Processed",
+      "Related Articles": [
+        "https://example.com/page/codex-vs-claude-code"
+      ],
+      "url": "https://example.com/page/agents-md-rules",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "ナレッジグラフと GraphRAG",
+      "userDefined:URL": "https://example.com/articles/graphrag-intro",
+      "Summary": "GraphRAG はナレッジグラフを使った RAG の一種だ。ナレッジグラフ で関係をたどり、RAG の回答に根拠を足す。",
+      "Key Takeaways": "・GraphRAG は関係をたどれる<br />・ナレッジグラフ の作成にコストがかかる",
+      "Knowledge Delta": "Extend: 関係の根拠を回答に付ける",
+      "Content Type": "Web Article",
+      "Source": "架空ブログ",
+      "date:Captured At:start": "2026-03-01",
+      "AI Score": 84,
+      "Processing Status": "Processed",
+      "Related Articles": [
+        "https://example.com/page/graphrag-agent"
+      ],
+      "url": "https://example.com/page/graphrag-intro",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "エージェントに GraphRAG を統合する",
+      "userDefined:URL": "https://example.com/articles/graphrag-agent",
+      "Summary": "エージェント に GraphRAG を統合し、質問に関係の経路で答える例を示す。GraphRAG は検索の前にグラフを見る。",
+      "Key Takeaways": "・エージェント が GraphRAG を呼ぶ<br />・経路を回答に残す",
+      "Knowledge Delta": "Extend: エージェントの根拠表示",
+      "Content Type": "Web Article",
+      "Source": "架空ニュース",
+      "date:Captured At:start": "2026-03-09",
+      "AI Score": 79,
+      "Processing Status": "Processed",
+      "Related Articles": [],
+      "url": "https://example.com/page/graphrag-agent",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "評価データでエージェントを検証する",
+      "userDefined:URL": "https://example.com/articles/eval-agents",
+      "Summary": "評価データを用意してエージェントを検証する。ベンチマークだけでは現場の質問を測れない。",
+      "Key Takeaways": "・評価は小さく始める<br />・エージェント の失敗例を集める",
+      "Knowledge Delta": "Extend: 失敗例を評価データに戻す",
+      "Content Type": "Web Article",
+      "Source": "架空ブログ",
+      "date:Captured At:start": "2026-03-15",
+      "AI Score": 66,
+      "Processing Status": "Processed",
+      "Related Articles": [],
+      "url": "https://example.com/page/eval-agents",
+      "Processing Note": "fixture note (should be dropped)"
+    },
+    {
+      "Title": "Playwright で画面を自動テストする",
+      "userDefined:URL": "https://example.com/articles/playwright-e2e",
+      "Summary": "Playwright で画面の自動テストを書く。TypeScript でスマホの幅も確かめられる。",
+      "Key Takeaways": "・e2e は主要な操作だけに絞る<br />・Playwright はスクリーンショットも撮れる",
+      "Knowledge Delta": "Extend: スマホ幅を最初から含める",
+      "Content Type": "Other",
+      "Source": "example.com/test",
+      "date:Captured At:start": "2026-03-22",
+      "AI Score": 60,
+      "Processing Status": "Processed",
+      "Related Articles": [],
+      "url": "https://example.com/page/playwright-e2e",
+      "Processing Note": "fixture note (should be dropped)"
+    }
+  ],
+  "has_more": false
+}
