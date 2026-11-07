@@ -1,0 +1,19 @@
+# 依存・ビルド
+node_modules/
+dist/
+.cache/
+
+# テストの出力
+test-results/
+playwright-report/
+coverage/
+
+# ローカルのデータ（Notion から取ったものは入れない）
+local-data/
+*.local.json
+articles-rows*.json
+article-*.txt
+
+# 秘密
+.env
+.env.*
