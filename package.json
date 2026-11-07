@@ -13,6 +13,7 @@
     "build": "vite build",
     "build:ontology": "tsx scripts/build-ontology.ts",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
     "test": "vitest run",
     "e2e": "vite build && playwright test",
     "check:secrets": "node scripts/check-secrets.mjs"
@@ -25,13 +26,16 @@
     "react-router-dom": "^7.18.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
     "@playwright/test": "^1.65.0",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.2.1",
+    "eslint": "^9.39.5",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2",
+    "typescript": "~6.0",
+    "typescript-eslint": "^8.72.1",
     "vite": "^8.3.6",
     "vitest": "^5.1.0"
   }

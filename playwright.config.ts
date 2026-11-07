@@ -14,7 +14,7 @@ export default defineConfig({
     { name: 'iphone-390', use: { ...common, viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 3 } },
   ],
   webServer: [
-    { command: `ARTICLES_PATH=fixtures/articles.sample.json PORT=${PORT} ONTOLOGY_CACHE_DIR=.cache/e2e node scripts/start.mjs --no-build`, url: `http://127.0.0.1:${PORT}/api/health`, timeout: 120000, reuseExistingServer: false },
+    { command: `PORT=${PORT} ONTOLOGY_CACHE_DIR=.cache/e2e node scripts/start.mjs --no-build`, url: `http://127.0.0.1:${PORT}/api/health`, timeout: 120000, reuseExistingServer: false },
     { command: `ARTICLES_PATH=fixtures/articles.empty.json PORT=5190 ONTOLOGY_CACHE_DIR=.cache/e2e-empty node scripts/start.mjs --no-build`, url: `http://127.0.0.1:5190/api/health`, timeout: 120000, reuseExistingServer: false },
     { command: `ARTICLES_PATH=fixtures/no-such-file.json PORT=${BAD_PORT} ONTOLOGY_CACHE_DIR=.cache/e2e-bad node scripts/start.mjs --no-build`, url: `http://127.0.0.1:${BAD_PORT}/`, timeout: 120000, reuseExistingServer: false },
   ],

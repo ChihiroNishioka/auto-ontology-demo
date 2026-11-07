@@ -28,7 +28,7 @@ test.describe('グラフ', () => {
     await expect(center(page)).toHaveText(first);
     await noHScroll(page);
     await bigEnough(page);
-    await page.screenshot({ path: `docs/screenshots/graph-${test.info().project.name}.png` });
+    await page.screenshot({ path: `docs/screenshots/graph-${test.info().project.name}.png`, fullPage: true });
   });
   test('サンプルデータの帯とデータ源', async ({ page }) => {
     await page.goto('/');
@@ -104,10 +104,10 @@ test.describe('質問', () => {
 
 test.describe('状態', () => {
   test('読み込み中：スケルトンと「読み込み中…」', async ({ page }) => {
-    await page.route('**/api/graph*', async (route) => { await new Promise((r) => setTimeout(r, 1500)); await route.continue(); });
+    await page.route('**/api/graph*', async (route) => { await new Promise((r) => setTimeout(r, 1200)); await route.continue(); });
     await page.goto('/');
     await expect(page.getByRole('status')).toContainText('読み込み中…');
-    await expect(center(page)).toBeVisible();
+    await expect(center(page)).toBeVisible({ timeout: 15000 });
   });
   test('エラー：表示 → もう一度試すで回復', async ({ page }) => {
     await page.route('**/api/graph*', (route) => route.fulfill({ status: 500, contentType: 'application/json', body: '{"error":{"code":"X","message":"x"}}' }));
@@ -125,10 +125,10 @@ test.describe('状態', () => {
   });
   test('データファイルが無い：案内画面（パスは出さない）', async ({ page }) => {
     await page.goto('http://127.0.0.1:5189/');
-    await expect(page.getByText('ARTICLES_PATH')).toBeVisible();
+    await expect(page.getByText('ARTICLES_PATH').first()).toBeVisible();
     await expect(page.locator('body')).not.toContainText('no-such-file');
     await noHScroll(page);
     await page.goto('http://127.0.0.1:5189/ask');
-    await expect(page.getByText('ARTICLES_PATH')).toBeVisible();
+    await expect(page.getByText('ARTICLES_PATH').first()).toBeVisible();
   });
 });

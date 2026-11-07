@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-// @ts-ignore - 型宣言は scripts/check-secrets.d.mts
 import { isForbiddenPath, scanText } from '../../scripts/check-secrets.mjs';
 import { HEX32, NOTION_HOST } from '../helpers';
 
